@@ -68,10 +68,9 @@ app.get('/api/scrape', async (req: Request, res: Response) => {
             }
         });
 
-        // --- LOG DE DEPURAÇÃO 4 ---
         console.log(`4. Extraction complete. Total number of products in the array: ${products.length}`);
 
-        // 4. Retorna os dados como JSON
+        //Retorn JSON Data
         res.json(products);
 
     } catch (error) {
@@ -80,7 +79,7 @@ app.get('/api/scrape', async (req: Request, res: Response) => {
     }
 });
 
-// Inicia o servidor
+// Start server
 app.listen(PORT, () => {
     console.log(`Backend server running on http://localhost:${PORT}`);
 });
