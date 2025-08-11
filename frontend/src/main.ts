@@ -1,12 +1,14 @@
 import './style.css';
 
+
+// Element from DOM
 const keywordInput = document.getElementById('keyword-input') as HTMLInputElement;
 const scrapeButton = document.getElementById('scrape-button') as HTMLButtonElement;
 const resultsContainer = document.getElementById('results-container')!;
 const loadingIndicator = document.getElementById('loading')!;
 const errorMessageDiv = document.getElementById('error-message')!;
 
-
+// Main search function
 const handleSearch = async () => {
   const keyword = keywordInput.value.trim();
   if (!keyword) {
@@ -37,13 +39,14 @@ const handleSearch = async () => {
     errorMessageDiv.textContent = `Error fetching products. Check if the backend is running and try again. Details: ${error instanceof Error ? error.message : 'Erro desconhecido.'}`;
     errorMessageDiv.classList.remove('hidden');
   } finally {
+    //Restore a UI to normal
     scrapeButton.disabled = false;
     scrapeButton.textContent = 'Serach';
     loadingIndicator.classList.add('hidden');
   }
 };
 
-
+// Render products
 const displayProducts = (products: any[]) => {
   resultsContainer.innerHTML = '';
 
@@ -56,6 +59,7 @@ const displayProducts = (products: any[]) => {
     const card = document.createElement('div');
     card.className = 'product-card';
 
+    // Fallbacks for null values
     card.innerHTML = `
       <img src="${product.imageUrl}" alt="Image from ${product.title}" />
       <h3>${product.title}</h3>
@@ -67,7 +71,7 @@ const displayProducts = (products: any[]) => {
   });
 };
 
-
+// Adding event listeners
 scrapeButton.addEventListener('click', handleSearch);
 
 keywordInput.addEventListener('keydown', (event) => {
