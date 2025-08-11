@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon search tool</title> </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Find products on Amazon</h1>
+        <p>Your tool for finding products on Amazon</p>
+      </header>
+
+      <main>
+        <div class="search-container">
+          <input type="text" id="keyword-input" placeholder="What are you looking for?" />
+          <button id="scrape-button">Search</button>
+        </div>
+
+        <div id="loading" class="hidden">
+          <p>Searching on Amazon... This may take a few seconds.</p>
+        </div>
+        <div id="error-message" class="hidden"></div>
+
+        <div id="results-container">
+          </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
