@@ -1,5 +1,7 @@
 # Find Amazon Products
 
+![image](./amazon.png)
+
 ## 📝 About The Project
 
 This application is a full-stack web application developed as part of a Trainee selection process. The goal is to demonstrate skills in developing an API with **Bun** and a reactive frontend with **Vite**, by consuming and displaying data scraped in real-time from a web page.
