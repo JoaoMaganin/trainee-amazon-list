@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "axios": "^1.11.0",
+    "bun": "^1.2.20",
+    "express": "^5.1.0",
+    "jsdom": "^26.1.0"
+  },
+  "name": "backend",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
