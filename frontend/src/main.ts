@@ -41,7 +41,7 @@ const handleSearch = async () => {
   } finally {
     //Restore a UI to normal
     scrapeButton.disabled = false;
-    scrapeButton.textContent = 'Serach';
+    scrapeButton.textContent = 'Search';
     loadingIndicator.classList.add('hidden');
   }
 };

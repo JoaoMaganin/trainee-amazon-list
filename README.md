@@ -81,7 +81,7 @@ To run the application, you will need **two terminals** open simultaneously, one
     ```
     > Vite will start the development server, usually at `http://localhost:5173`.
 
-Open the frontend URL in your browser, type in a product name, and click "Serach" to see the magic happen!
+Open the frontend URL in your browser, type in a product name, and click "Search" to see the magic happen!
 
 ---
 
